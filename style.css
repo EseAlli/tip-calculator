@@ -48,7 +48,7 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .bill {
@@ -56,11 +56,28 @@ form {
   flex-direction: column;
 }
 
+.bill input {
+  background-image: url(./images/icon-dollar.svg);
+}
+
+label,
+.percent p {
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
 input {
   background-color: var(--secondary-grayish-cyan);
   border: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 3px;
+  margin-top: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-origin: content-box;
+  background-size: 10px;
+  border-radius: 5px;
 }
 
 .percent {
@@ -72,15 +89,16 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.75rem;
+  margin: 0.75rem 0;
 }
 
 .percent button {
-  padding: 0.5rem 2rem;
+  padding: 0.75rem 2rem;
   font-weight: 700;
   border: none;
   border-radius: 5px;
   inline-size: 45%;
+  font-size: 1rem;
 }
 
 .five,
@@ -96,10 +114,25 @@ input {
   color: var(--dark-cyan);
 }
 
+.custom {
+  color: var(--dark-grayish-cyan);
+  background-color: var(--secondary-grayish-cyan);
+  font-weight: 700;
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+}
+
+.people input {
+  background-image: url(./images/icon-person.svg);
+}
+
 .calculation {
   background-color: var(--dark-cyan);
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 1.25rem 1rem;
+  margin: 1.25rem 0;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -114,6 +147,8 @@ input {
 
 .calculation p {
   color: var(--primary-white);
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .calculation small {
@@ -123,16 +158,24 @@ input {
 
 .calculation button {
   inline-size: 100%;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   text-transform: uppercase;
   color: var(--dark-cyan);
   font-weight: 700;
   background-color: var(--primary-cyan);
   border: none;
   border-radius: 5px;
+  margin-top: 0.75rem;
 }
 
 .calculation .amount {
   font-size: 1.5rem;
   color: var(--primary-cyan);
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.amount span {
+  font-size: 1rem;
 }
