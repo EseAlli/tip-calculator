@@ -35,12 +35,17 @@ img {
   object-fit: contain;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .logo {
   margin: 2rem 0;
 }
 
 .calculator {
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   background-color: var(--primary-white);
   padding: 1.5rem;
 }
@@ -70,7 +75,7 @@ label,
 input {
   background-color: var(--secondary-grayish-cyan);
   border: none;
-  padding: 0.75rem;
+  padding: 0.5rem 0.75rem;
   border: 3px;
   margin-top: 0.5rem;
   background-repeat: no-repeat;
@@ -78,6 +83,11 @@ input {
   background-origin: content-box;
   background-size: 10px;
   border-radius: 5px;
+  text-align: end;
+  color: var(--dark-cyan);
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: "Space Mono", monospace;
 }
 
 .percent {
@@ -93,12 +103,13 @@ input {
 }
 
 .percent button {
-  padding: 0.75rem 2rem;
+  padding: 0.45rem 2rem;
   font-weight: 700;
   border: none;
   border-radius: 5px;
   inline-size: 45%;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-family: "Space Mono", monospace;
 }
 
 .five,
@@ -109,15 +120,28 @@ input {
   color: var(--primary-white);
 }
 
+.five:hover,
+.ten:hover,
 .fifteen {
   background-color: var(--primary-cyan);
   color: var(--dark-cyan);
 }
 
 .custom {
-  color: var(--dark-grayish-cyan);
+  color: var(--dark-cyan);
   background-color: var(--secondary-grayish-cyan);
   font-weight: 700;
+  inline-size: 45%;
+  text-align: end;
+  margin-top: 0;
+  padding: 0.45rem 0.75rem;
+  font-weight: 700;
+}
+
+.custom::placeholder {
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  text-align: center;
 }
 
 .people {
@@ -132,7 +156,7 @@ input {
 .calculation {
   background-color: var(--dark-cyan);
   padding: 1.25rem 1rem;
-  margin: 1.25rem 0;
+  margin: 1.5rem 0 1.25rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -177,5 +201,5 @@ input {
 }
 
 .amount span {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
