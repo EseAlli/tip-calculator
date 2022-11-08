@@ -21,7 +21,7 @@
         <form>
           <div class="bill">
             <label>Bill</label>
-            <input />
+            <input class="bill-input" />
           </div>
           <div class="percent">
             <p>Select Tip %</p>
@@ -36,7 +36,7 @@
           </div>
           <div class="people">
             <label>Number of People</label>
-            <input min="1"/>
+            <input min="1" class="people-input"/>
           </div>
         </form>
         <div class="calculation">
@@ -45,18 +45,19 @@
               Tip Amount <br />
               <small> / person</small>
             </p>
-            <p class="amount"><span>$</span>4.27</p>
+            <p class="amount tip"><span>$</span>0.00</p>
           </div>
           <div>
             <p>
               Total <br />
               <small>/ person</small>
             </p>
-            <p class="amount"><span>$</span>32.79</p>
+            <p class="amount total"><span>$</span>0.00</p>
           </div>
           <button class="reset">Reset</button>
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
