@@ -242,6 +242,11 @@ input:focus {
     max-width: 60%;
     border-radius: 25px;
   }
+
+  .label,
+  .percent p {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -280,12 +285,21 @@ input:focus {
     font-size: 2.25rem;
   }
 
+  .amount span {
+    font-size: 1.5rem;
+  }
+
+  .calculation p {
+    font-size: 1.125rem;
+  }
+
+  .calculation small {
+    font-size: 0.85rem;
+  }
+
   .calculation button {
     margin-top: auto;
     background-color: hsla(172, 67%, 45%, 0.3);
-  }
-
-  .calculation button:hover {
   }
 }
 
@@ -300,7 +314,19 @@ input:focus {
     margin-left: 1rem;
   }
 
+  label,
+  .percent p {
+    font-size: 1.25rem;
+  }
+
   .calculation {
     align-self: stretch;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+  .amount span {
+    font-size: 2rem;
   }
 }
