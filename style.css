@@ -149,6 +149,16 @@ input {
   flex-direction: column;
 }
 
+.people label {
+  display: flex;
+}
+
+.people span {
+  display: none;
+  margin-left: auto;
+  color: red;
+}
+
 .people input {
   background-image: url(./images/icon-person.svg);
 }
