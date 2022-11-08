@@ -20,6 +20,8 @@ function calculator(event) {
 
 form.addEventListener("submit", calculator);
 
+people.addEventListener("focus", errorFunc);
+
 people.addEventListener("change", errorFunc);
 
 buttons.forEach((btn) => {
@@ -49,7 +51,9 @@ reset.addEventListener("click", () => {
 function errorFunc() {
   if (people.value <= 0) {
     errorMsg.style.display = "block";
+    people.style.border = "2px solid red";
   } else {
     errorMsg.style.display = "none";
+    people.style.border = "none";
   }
 }

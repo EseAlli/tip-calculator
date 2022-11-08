@@ -38,6 +38,11 @@ img {
   object-fit: contain;
 }
 
+button {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -92,8 +97,16 @@ input {
   font-weight: 700;
   font-size: 1.25rem;
   font-family: "Space Mono", monospace;
+  outline: none;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2px solid var(--primary-cyan);
+}
 .percent {
   display: flex;
   flex-direction: column;
@@ -126,8 +139,10 @@ input {
 
 .five:hover,
 .ten:hover,
-.fifteen {
-  background-color: var(--primary-cyan);
+.fifteen:hover,
+.twenty-five:hover,
+.fifty:hover {
+  background-color: hsl(185, 41%, 84%);
   color: var(--dark-cyan);
 }
 
@@ -206,6 +221,10 @@ input {
   margin-top: 0.75rem;
 }
 
+.calculation button:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+
 .calculation .amount {
   font-size: 1.5rem;
   color: var(--primary-cyan);
@@ -220,7 +239,7 @@ input {
 
 @media (min-width: 600px) {
   .calculator {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 
@@ -229,12 +248,18 @@ input {
     gap: 3rem;
   }
 
+  .fifteen {
+    background-color: var(--dark-cyan);
+    color: var(--primary-white);
+  }
+
   .calculator {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 1.75rem 2.25rem;
     border-radius: 25px;
+    max-width: 80%;
   }
 
   .percent button {
@@ -256,11 +281,25 @@ input {
 
   .calculation button {
     margin-top: auto;
+    background-color: hsla(172, 67%, 45%, 0.3);
+  }
+
+  .calculation button:hover {
   }
 }
 
 @media (min-width: 1280px) {
   .calculator {
     max-width: 60%;
+    padding: 1.75rem 1.5rem;
+    align-items: center;
+  }
+
+  form {
+    margin-left: 1rem;
+  }
+
+  .calculation {
+    align-self: stretch;
   }
 }
